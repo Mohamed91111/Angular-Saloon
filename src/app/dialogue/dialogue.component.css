@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+.container{
+    background-color: #f4a46075;
+    opacity: 0.8;
+    border: double 6px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    border-radius: 33px;
+    padding: 23px;
+    margin-top: 35px;
+}
+p {
+    font-family: 'Rye', cursive;
+    font-size: 26px;
+}
+.subBtn{
+    background-color: #53301175;
+    border: 3px solid #ccc;
+    border-radius: 33px;
+    color: white;
+    padding: 13px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+.subBtn:hover{
+    border: 3px solid #555;
+    border-radius: 33px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+}
+
+.button3 {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 17px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  background-color: #f1c40f;
+  box-shadow: 0px 5px 0px 0px #D8AB00; 
+  }
+
+  .button3:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+  }
+  
+  .button3:hover {
+    background-color: #FFDE29;
+  }
+
+
+  input[type=text] {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 33px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  input[type=text]:focus {
+    border: 3px solid #555;
+    border-radius: 33px;
+  }

@@ -1,1 +1,27 @@
-<p>dialogue works!</p>
+<div class="container">
+    <div class="optionOne" *ngIf="!newUser && !nameRegistered">
+        <p>Howdy, stranger. Haven't seen your face around here before.<br>What's your name?</p>
+        <input type="text" placeholder="First Name" #nameInput>
+        <input type="text" placeholder="Last Name" #lastNameInput>
+        <button type="button" class="subBtn"(click)="onNameReg(nameInput.value,lastNameInput.value)">Submit</button>
+    </div>
+    <div class="optionTwo" *ngIf="newUser && !selected">
+        <p>Hello again,{{lastName}} The usual?</p>
+        <app-the-usual *ngIf="!selected" (click)="onSelection($event)" (theUsual)="getSelectedBev($event)"></app-the-usual>
+    </div>
+
+    <div class="conv" *ngIf="nameRegistered && !newUser && !selected ">
+        <p>Alright Mr.{{lastName}}, what can I do you for?</p>
+    </div>
+    <div *ngIf="!selected">
+            <app-select-beverage *ngIf="newUser || nameRegistered" (theUsual)="onSelection($event)" (bev)="getSelectedBev($event)"></app-select-beverage>
+    
+    </div>
+
+    <div *ngIf="selected">
+        <p>One {{beverage}}, coming right up!</p>
+    </div>
+
+
+    <button class="button button3" style="font-family: monospace;" (click)="deleteMe()" > I was Never Here</button>
+</div>

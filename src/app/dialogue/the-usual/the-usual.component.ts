@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { LocalStorage } from '../../local-storage.service';
 
 @Component({
   selector: 'app-the-usual',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./the-usual.component.css']
 })
 export class TheUsualComponent implements OnInit {
-
-  constructor() { }
+  @Output() click = new EventEmitter<boolean>();
+  @Output() theUsual = new EventEmitter<string>();
+  constructor(private localStorage: LocalStorage) { }
 
   ngOnInit(): void {
+  }
+
+  getUsual() {
+    const usualDrink = this.localStorage.getUsual();
+    const clicked = true;
+    this.theUsual.emit(usualDrink);
+    this.click.emit(clicked);
   }
 
 }
